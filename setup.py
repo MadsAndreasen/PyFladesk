@@ -1,11 +1,11 @@
 from setuptools import setup
 
-setup(name='PyFladesk',
+setup(name='PySideFlask',
       version='1.1',
       setup_requires=['setuptools-markdown'],
       long_description_markdown_filename='README.md',
       description='Create desktop application by using Flask and QtWebEngine',
-      url="https://github.com/smoqadam/PyFladesk",
+      url="https://github.com/smoqadam/PySideFlask",
       author='​Saeed Moqadam, Ezequiel Castaño​',
       author_email='saeed.moqadam@gmail.com, castanoezequielleonardo@gmail.com',
       license='MIT',
@@ -13,7 +13,7 @@ setup(name='PyFladesk',
           'flask',
           'pyside2',
       ],
-      packages=['pyfladesk'],
+      packages=['PySideFlask'],
       zip_safe=False,
       keywords = ['​GUI​', '​Flask​', 'Qt'],
       classifiers=[

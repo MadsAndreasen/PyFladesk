@@ -35,7 +35,7 @@ class WebPage(QtWebEngineWidgets.QWebEnginePage):
 
 
 def init_gui(application, port=0, width=800, height=600,
-             window_title="PyFladesk", icon="appicon.png", argv=None):
+             window_title="PySideFlask", icon="appicon.png", argv=None):
     if argv is None:
         argv = sys.argv
 

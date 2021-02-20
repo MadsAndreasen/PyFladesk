@@ -1,5 +1,5 @@
 from flask import Flask
-from pyfladesk import init_gui
+from pysideflask import init_gui
 
 app = Flask(__name__)
 
