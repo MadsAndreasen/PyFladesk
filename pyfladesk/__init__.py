@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import QtCore, QtWidgets, QtGui, QtWebEngineWidgets
+from PySide2 import QtCore, QtWidgets, QtGui, QtWebEngineWidgets
 import socket
 
 

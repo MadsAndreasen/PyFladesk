@@ -1,3 +1,0 @@
-flask>=0.12.2
-pyqt5>=5.12
-pyqtwebengine>=5.12
