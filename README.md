@@ -1,6 +1,8 @@
 ## PySideFlask
 
-Create desktop application by using Flask and QtWebEngine.
+Create desktop application by using Flask and Pyside2.
+
+This is a fork of PyFladesk, where  PyQT5 has been exchanged with PySide2
 
 ## Idea
 
@@ -12,31 +14,15 @@ By default, every internal link is open inside the app and every external link i
 
 - Python3
 - Flask
-- PyQt
+- Pyside2
 
-Note: Some releases require Conda to properly create a virtual environment.
-
-## Versions
-
-There are 3 available versions:
-
-- [PyQt4 - Legacy](https://github.com/smoqadam/PySideFlask/releases/tag/0.1)
-- [PyQt5.6 - Legacy](https://github.com/smoqadam/PySideFlask/releases/tag/0.2)
-- [PyQt5.10](https://github.com/smoqadam/PySideFlask/releases/tag/1.0)
-
-Note: Both PyQt4 and PyQt5.6 are only made available for compatibility reasons, there is no intention to keep them updated unless requested.
 
 ## Installation with pip
 
 If you want to install PySideFlask with pip you just run.
 
-`pip install PySideFlask`
+`pip install pysideflask`
 
-Only the latest version (PyQt5.10) is uploaded to PyPI. If you want to use a legacy version check the instructions in the corresponding branch readme. Each version is maintained in a different form due to versions issues so you should check the readme of the branch of the version you want to use.
-
-## No pip installation
-
-In case you don't want to use pip or you want to use a freezed version of PySideFlask, just download the `__init__.py` file from the `PySideFlask` folder and place it in your project (change the name to PySideFlask.py), then you can follow the instructions below.
 
 ## Usage
 
@@ -44,7 +30,7 @@ You just need to change two lines:
 
 Add an import at the top:
 
-`from PySideFlask import init_gui`
+`from pysideflask import init_gui`
 
 And wherever you run the app (`app.run`) replace it with:
 
@@ -56,7 +42,7 @@ Then run your app as usual
 
 ```python
 from flask import Flask
-from PySideFlask import init_gui
+from pysideflask import init_gui
 
 app = Flask(__name__)
 
@@ -116,7 +102,6 @@ Depending on the Linux version, you might need to install `sudo apt install libp
 
 This will create a folder `dist` with our executable ready to be shipped. The executable will open the main window of our app.
 
-If you still see `TemplateNotFound`, you may try the following (From [issue #9](https://github.com/smoqadam/PySideFlask/issues/9#issuecomment-372352796)):
 
 Define this in a helper script:
 
@@ -138,17 +123,9 @@ else:
     app = Flask(__name__)
 ```
 
-Also from [issue #9](https://github.com/smoqadam/PySideFlask/issues/9#issuecomment-372352796), in Windows 10 you may need to run this script:
-
-`pyinstaller -w -F --add-data "templates;templates" --add-data "static;static" app.py --path 'C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\x64'`
 
 Since Qt is quite big, your executables will be big too. The example app of this repository is 70 MB (69 MB of which are the Qt Component for displaying HTML). This is reasonable taking into account that we are shipping a self contain web browser. In case size is crucial, you can follow [this suggestions](https://elc.github.io/posts/executable-flask-pyinstaller/#the-other-problem-the-size)
 
-## Sample apps
-
-List of apps made by PySideFlask
-
-- [RSS Reader](https://github.com/smoqadam/PySideFlask-rss-reader)
 
 ## Contributing Oportunities
 
@@ -162,4 +139,4 @@ Feel free to open issues and pull requests for new features and improvements. Th
 
 ## Thanks
 
-Thanks to [Mathias Ettinger](http://codereview.stackexchange.com/users/84718/mathias-ettinger) for his reviews, one [for the old code](https://codereview.stackexchange.com/a/114307/161364) and one [for the new one](https://codereview.stackexchange.com/a/188124/161364)
+Thanks to ​Saeed Moqadam, for the original [Pyfladesk](https://github.com/smoqadam/PyFladesk)
