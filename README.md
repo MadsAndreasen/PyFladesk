@@ -1,4 +1,5 @@
 ## PySideFlask
+[![PyPI version shields.io](https://img.shields.io/pypi/v/pysideflask.svg)](https://pypi.python.org/pypi/pysideflask/)
 
 Create desktop application by using Flask and Pyside2.
 
